@@ -13,6 +13,16 @@ const express = require ("express"),
 
     app.use(express.static('public'));
 
+    function actualizarVisitas (){
+        document.querySelector('.visita').innerHTML = arreglo.length;
+    }
+    
+    var arreglo = JSON.parse(localStorage.getItem('arreglo'));
+    if(arreglo == null) arreglo = [];
+    localStorage.clear('arreglo');
+    
+    actualizarVisitas();
+
     document.querySelectorAll('.agregar').forEach(function(button) {
         button.addEventListener('click', function(){
             var id = button.parentElement.getAttribute('data-id');
@@ -28,12 +38,4 @@ const express = require ("express"),
         });
     });
 
-    function actualizarVisitas (){
-        document.querySelector('.visita').innerHTML = arreglo.length;
-    }
-    
-    var arreglo = JSON.parse(localStorage.getItem('arreglo'));
-    if(arreglo == null) arreglo = [];
-    localStorage.clear('arreglo');
-    
-    actualizarVisitas();
+   

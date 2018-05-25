@@ -1,0 +1,49 @@
+body{
+    background-color:rgb(241,212,122);
+    margin: 0;
+    font-family:'Mitr', sans-serif;
+  }
+//BOTON
+
+.agregar {
+    
+    border: solid;
+    background-color: rgb(42, 155,152);
+    padding: 12px 25px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .agregar:hover{
+  background-color: white;
+  color:  rgb(42, 155,152);
+  
+  }
+  
+  
+  .agregar span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  }
+  
+  .agregar span:after {
+  content: '>>';
+  position: absolute;
+  opacity: 0;
+  right: -20px;
+  transition: 0.5s;
+  }
+  
+  .agregar:hover span {
+  padding-right: 25px;
+  
+  }
+  
+  .agregar:hover span:after {
+  opacity: 1;
+  right: 0;
+  color:  rgb(42, 155,152);
+  
+  }
